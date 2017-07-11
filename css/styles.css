@@ -1,0 +1,62 @@
+
+nav {
+  background-color: gray;
+  height: 5em;
+}
+
+#hero img{
+  width: 1980px;
+  max-width: 100%;
+  position: absolute;
+}
+
+#heroTextContainer {
+  margin-left: 62em;
+  margin-top: 22em;
+  max-width: 35em;
+  position: relative;
+}
+
+#heroText {
+  color: white;
+  font-size: 20px;
+  position: relative;
+};
+
+.button {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px 24px;
+    border: 1px solid #1a1616;
+    border-radius: 8px;
+    background: #826e6e;
+    background: -webkit-gradient(linear, left top, left bottom, from(#826e6e), to(#1a1616));
+    background: -moz-linear-gradient(top, #826e6e, #1a1616);
+    background: linear-gradient(to bottom, #826e6e, #1a1616);
+    text-shadow: #0d0b0b 1px 5px 1px;
+    font: normal normal bold 26px arial;
+    color: #fff;
+    text-decoration: none;
+}
+.button:hover,
+.button:focus {
+    background: #9c8484;
+    background: -webkit-gradient(linear, left top, left bottom, from(#9c8484), to(#1f1a1a));
+    background: -moz-linear-gradient(top, #9c8484, #1f1a1a);
+    background: linear-gradient(to bottom, #9c8484, #1f1a1a);
+    color: #ffffff;
+    text-decoration: none;
+}
+.button:active {
+    background: #1a1616;
+    background: -webkit-gradient(linear, left top, left bottom, from(#1a1616), to(#1a1616));
+    background: -moz-linear-gradient(top, #1a1616, #1a1616);
+    background: linear-gradient(to bottom, #1a1616, #1a1616);
+}
+
+nav {
+  margin: auto 0;
+  max-width: 100%;
+
+}
