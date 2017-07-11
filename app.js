@@ -4,7 +4,12 @@ $(document).ready(function() {
     $("#heroText").fadeOut(4000);
     $("#heroText").fadeIn('slow');
   })
+  $('.icon-menu').on('click', function() {
+    $('header nav ul').fadeIn('slow');
+
+  });
 });
+
 
 
 //Projected Functions to be written

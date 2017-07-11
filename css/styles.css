@@ -71,3 +71,19 @@ nav ul li {
   display: inline-block;
   padding-right: 5em;
 }
+
+.icon-menu {
+  height: 2em;
+  width: 2em;
+  display: none;
+}
+
+
+@media (min-width: 320px) and (max-width: 568px) {
+  header nav ul {
+    display:none;
+  }
+  .icon-menu {
+    display: block;
+  }
+}
