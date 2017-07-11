@@ -6,13 +6,9 @@ nav {
   height: 5em;
 }
 
-/*#hero img{
-  width: 1980px;
-  max-width: 100%;
-  position: absolute;
-}*/
 
 #hero {
+  margin-top: -20em;
   background-image: url('/img/PortBackground.jpg');
   background-repeat: no-repeat;
   background-position: center;
@@ -69,5 +65,9 @@ nav {
 nav {
   margin: auto 0;
   max-width: 100%;
+}
 
+nav ul li {
+  display: inline-block;
+  padding-right: 5em;
 }
