@@ -1,7 +1,7 @@
 'use-strict';
 $(document).ready(function() {
   $(window).scroll(function() {
-    $("#heroText").fadeOut('slow');
+    $("#heroText").fadeOut(4000);
     $("#heroText").fadeIn('slow');
   })
 });
