@@ -5,6 +5,7 @@ $(document).ready(function() {
     $("#heroText").fadeIn('slow');
   })
   $('.icon-menu').on('click', function() {
+    $(this).
     $('header nav ul').fadeIn('slow');
 
   });
