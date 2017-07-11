@@ -15,3 +15,5 @@ var exampleOne = new DisplayWork(
   'Created for a local business',
   'http://www.lakewood-vet-hospital.com'
 );
+
+console.log(exampleOne);
