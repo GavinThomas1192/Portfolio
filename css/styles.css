@@ -1,20 +1,31 @@
-
+body {
+  background-color: gray;
+}
 nav {
   background-color: gray;
   height: 5em;
 }
 
-#hero img{
+/*#hero img{
   width: 1980px;
   max-width: 100%;
   position: absolute;
+}*/
+
+#hero {
+  background-image: url('/img/PortBackground.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1920px 1280px;
+
 }
 
 #heroTextContainer {
   margin-left: 62em;
-  margin-top: 22em;
   max-width: 35em;
   position: relative;
+  height: 1280px;
+  padding-top: 40em;
 }
 
 #heroText {
