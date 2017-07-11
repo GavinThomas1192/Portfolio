@@ -5,8 +5,9 @@ $(document).ready(function() {
     $("#heroText").fadeIn('slow');
   })
   $('.icon-menu').on('click', function() {
-    $(this).
+    $(this).hide();
     $('header nav ul').fadeIn('slow');
+    $(this).fadeIn(2000);
 
   });
 });
