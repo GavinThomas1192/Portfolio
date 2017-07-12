@@ -81,6 +81,12 @@ nav ul li {
   display: none;
 }
 
+#thumbnail {
+  width: 600px;
+  height: 400px;
+}
+
+
 
 
 
@@ -88,10 +94,26 @@ nav ul li {
   header nav ul {
     display:none;
   }
+
+  #heroText {
+    color: white;
+    font-size: 20px;
+    position: relative;
+  };
+
+  #heroTextContainer {
+    margin-left: auto;
+    max-width: 35em;
+    position: relative;
+    /*height: 1280px;*/
+    padding-top: 40em;
+  }
+
   .icon-menu {
     display: block;
     text-align: center;
     max-height: 2em;
     max-width: 2em;
   }
+
 }
