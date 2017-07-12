@@ -82,11 +82,23 @@ nav ul li {
 }
 
 #thumbnail {
-  width: 600px;
-  height: 400px;
+  width: 400px;
+  height: 300px;
 }
 
+.template {
+  display: none;
+}
 
+.projects {
+  display: inline;
+}
+
+article {
+  text-align: center;
+  max-width: 33%;
+  display: inline-block;
+}
 
 
 
