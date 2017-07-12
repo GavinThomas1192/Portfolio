@@ -10,7 +10,15 @@ $(document).ready(function() {
     $(this).fadeIn(3000);
 
   });
+
+  // if ($(window).width() < 720) {
+  //   $('#heroTextContainer').offset({
+  //     top: 10,
+  //     left: 30
+  //   });
+  // }
 });
+
 
 
 
