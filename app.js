@@ -1,13 +1,13 @@
 'use-strict';
 $(document).ready(function() {
   $(window).scroll(function() {
-    $("#heroText").fadeOut(4000);
-    $("#heroText").fadeIn('slow');
+    $('#heroText').fadeOut(4000);
+    $('#heroText').fadeIn('slow');
   })
   $('.icon-menu').on('click', function() {
     $(this).hide();
     $('header nav ul').fadeIn('slow');
-    $(this).fadeIn(2000);
+    $(this).fadeIn(3000);
 
   });
 });
@@ -15,21 +15,39 @@ $(document).ready(function() {
 
 
 //Projected Functions to be written
-var allWork = [];
+var pastProjects = [];
 
-function DisplayWork(thumbnailPath, title, description, url) {
-  this.thumbnailPath = thumbnailPath;
-  this.title = title;
-  this.description = description;
-  this.url = url;
-  allWork.push(this);
+function PastProject(rawDataObj) {
+  this.thumbnailPath = rawDataObj.thumbnailPath;
+  this.title = rawDataObj.title;
+  this.description = rawDataObj.description;
+  this.url = rawDataObj.url;
 }
 
-var exampleOne = new DisplayWork(
-  'img/LakewoodSS.png',
-  'Lakewood Veterinary Hospital',
-  'Created for a local business',
-  'http://www.lakewood-vet-hospital.com'
-);
+PastProject.prototype.toHtml = function() {
+  var $newPastProject = $('article.template').clone();
 
-console.log(exampleOne);
+  $($newPastProject).removeClass().addClass(this.title);
+
+  $('.template').append(this.title);
+  var thumbnail = $('<img id="thumbnail">');
+  thumbnail.attr('src', this.thumbnailPath);
+  thumbnail.appendTo('.template');
+  var p = $('<p></p>');
+  p.text(this.description);
+  p.appendTo('.template');
+  // $('.template').append(this.description);
+  $('.template').append(this.url);
+
+};
+
+rawData.forEach(function(projectObject) {
+  pastProjects.push(new PastProject(projectObject));
+
+});
+
+pastProjects.forEach(function(PastProject) {
+  $('#articles').append(PastProject.toHtml());
+});
+
+console.log(PastProject);
