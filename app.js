@@ -10,7 +10,9 @@ $(document).ready(function() {
     $(this).fadeIn(3000);
 
   });
+
 });
+
 
 
 
@@ -27,17 +29,14 @@ function PastProject(rawDataObj) {
 PastProject.prototype.toHtml = function() {
   var $newPastProject = $('article.template').clone();
 
-  $($newPastProject).removeClass().addClass(this.title);
+  $newPastProject.removeClass().addClass(this.title);
 
-  $('.template').append(this.title);
-  var thumbnail = $('<img id="thumbnail">');
-  thumbnail.attr('src', this.thumbnailPath);
-  thumbnail.appendTo('.template');
-  var p = $('<p></p>');
-  p.text(this.description);
-  p.appendTo('.template');
-  // $('.template').append(this.description);
-  $('.template').append(this.url);
+
+  $newPastProject.find('h1').html(this.title);
+  $newPastProject.find('a').attr('href', this.url);
+  $newPastProject.find('img').attr('src', this.thumbnailPath);
+  $newPastProject.find('section').html(this.description);
+  return $newPastProject;
 
 };
 
