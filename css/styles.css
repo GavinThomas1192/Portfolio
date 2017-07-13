@@ -1,6 +1,7 @@
 body {
   background-color: rgb(78, 91, 96);
   text-align: center;
+  color: white;
 }
 nav {
   background-color: rgb(78, 91, 96);;
@@ -12,6 +13,7 @@ nav {
   font-size: 100px;
   margin-top: 10%;
   margin-bottom: 5%;
+  text-shadow: 4px 4px black;
 }
 
 #hero {
@@ -147,7 +149,6 @@ article {
   }
 
   #heroText {
-
     margin: 0;
   };
 

@@ -1,10 +1,12 @@
 'use-strict';
 $(document).ready(function() {
+
+  $('#quote').hide();
+
   $(window).mousemove(function() {
     $('#heroText').fadeOut(4000);
     $('#heroText').fadeIn('slow');
-    $('#quote').hide();
-    $('#quote').fadeIn(4000);
+    $('#quote').fadeIn(5000);
   })
   $('.icon-menu').on('click', function() {
     $(this).hide();
