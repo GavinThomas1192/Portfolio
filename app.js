@@ -1,8 +1,10 @@
 'use-strict';
 $(document).ready(function() {
-  $(window).scroll(function() {
+  $(window).click(function() {
     $('#heroText').fadeOut(4000);
     $('#heroText').fadeIn('slow');
+    $('#quote').fadeOut('fast');
+    $('#quote').fadeIn('4000');
   })
   $('.icon-menu').on('click', function() {
     $(this).hide();
@@ -10,13 +12,8 @@ $(document).ready(function() {
     $(this).fadeIn(3000);
 
   });
-
 });
 
-
-
-
-//Projected Functions to be written
 var pastProjects = [];
 
 function PastProject(rawDataObj) {
@@ -49,4 +46,14 @@ pastProjects.forEach(function(PastProject) {
   $('#articles').append(PastProject.toHtml());
 });
 
-console.log(PastProject);
+pastProjects.handleMainNav = function() {
+  $('.main-nav .tab').on('click', function () {
+    $('.tab-content').hide();
+    $('#' + $(this).data('content')).fadeIn();
+
+
+  });
+  $('.main-nav .tab:first').click();
+};
+
+pastProjects.handleMainNav();
