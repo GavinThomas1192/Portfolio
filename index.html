@@ -10,8 +10,10 @@
   <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/icons.css">
   <link rel="stylesheet" href="css/styles.css">
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
 
   <link rel="icon" type="image/png" href="img/logo.png">
 
@@ -19,38 +21,53 @@
 
 <body>
   <header>
-    <nav>
+    <nav class="main-nav">
       <ul>
+        <li class="tab" data-content="main"><a href="#"> Home</a></li>
+        <li class="tab" data-content="about"><a href="#">About</a></li>
+        <li class="tab" data-content="myProjects"><a href="#">My Projects</a></li>
         <li><a href="https://github.com/GavinThomas1192">GitHub</a></li>
-        <li>LinkedIn</li>
+
       </ul>
     </nav>
     <!-- <span class="icon-menu"></span> -->
     <span class="icon-menu"><img src="/img/Hamburger_icon.png" alt=""></span>
   </header>
-  <div id="hero">
-    <div id="heroTextContainer">
-      <div id="heroText">
-        <h1>Hi, I'm Gavin</h1>
-        <p id="paragraphText">I'm a full stack web developer. </br> I can solve your problems.</p>
+  <main id="main" class="tab-content">
+    <div id="hero">
+      <div id="heroTextContainer">
+        <div id="heroText">
+          <h1>Hi, I'm Gavin</h1>
+          <p id="paragraphText">I'm a full stack web developer. </br> I can solve your problems.</p>
+        </div>
+        <a class="button" href="#">Hire Me</a>
       </div>
-      <a class="button" href="#">Hire Me</a>
     </div>
-  </div>
-
-  <div class="projects">
-    <section id="articles">
-      <article class="template">
-        <header>
-          <h1>Title</h1>
-          <div class="byline">
-            <a href=""><img id='thumbnail' src=""></a>
-          </div>
-        </header>
-        <section class="article-body"></section>
-      </article>
-    </section>
-  </div>
+  </main>
+  <section id="myProjects" class="tab-content">
+    <h1 id='whatIveDone'>Some of my work</h1>
+    <div class="projects">
+      <section id="articles">
+        <article class="template">
+          <header>
+            <h1>Title</h1>
+            <div class="byline">
+              <a href=""><img id='thumbnail' src=""></a>
+            </div>
+          </header>
+          <section class="article-body"></section>
+        </article>
+      </section>
+    </div>
+  </section>
+  <section id="about" class="tab-content">
+    <div>
+      <h1>Hello this is my about me. I'm awesome.</h1>
+      <p>Thanks for your interest in my skills. I was born and raised in Washington State and it is my home.</p>
+      <p id="quote">The world breaks everyone, and afterward, some are strong at the broken places. </br> ~Earnest Hemingway</p>
+      <img src="/img/headshot.JPG" alt="">
+    </div>
+  </section>
   <script src="projectsdata.js"></script>
   <script src="app.js">
   </script>

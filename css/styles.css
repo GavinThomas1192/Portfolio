@@ -1,34 +1,46 @@
 body {
-  background-color: gray;
+  background-color: rgb(78, 91, 96);
+  text-align: center;
 }
 nav {
-  background-color: gray;
+  background-color: rgb(78, 91, 96);;
   height: 5em;
 }
 
+#whatIveDone {
+  text-align: center;
+  font-size: 100px;
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
 
 #hero {
-  margin-top: -20em;
+  text-align: center;
+  height: 100%;
+  width: 100%;
   background-image: url('/img/PortBackground.jpg');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 1920px 1280px;
+  background-size: 100%;
 
 }
 
 #heroTextContainer {
-  margin-left: 62em;
+  text-align: center;
+  margin-left: 35%;
   max-width: 35em;
   position: relative;
-  height: 1280px;
-  padding-top: 40em;
+  padding: 10% 0% 20% 0%;
 }
 
 #heroText {
   color: white;
   font-size: 20px;
   position: relative;
+  background-color: rgba(78, 91, 96, 0.3);
+  border-radius: 3%;
 };
+
 
 .button {
     display: inline-block;
@@ -70,6 +82,12 @@ nav {
 nav ul li {
   display: inline-block;
   padding-right: 5em;
+  text-decoration: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
 }
 
 .icon-menu {
@@ -82,8 +100,8 @@ nav ul li {
 }
 
 #thumbnail {
-  width: 400px;
-  height: 300px;
+  width: 300px;
+  height: 150px;
 }
 
 .template {
@@ -98,6 +116,22 @@ article {
   text-align: center;
   max-width: 33%;
   display: inline-block;
+  padding-bottom: 10%;
+}
+#about div {
+  padding-top: 6%;
+}
+
+#about {
+  display: inline;
+  color: white;
+}
+#about img {
+  border-radius: 5%;
+  height: 35%;
+  width: 35%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 
@@ -106,19 +140,20 @@ article {
   header nav ul {
     display:none;
   }
+  #hero {
+    background-image: url();
+    background-color: rgb(78, 91, 96);;
+    margin: 0;
+  }
 
   #heroText {
-    color: white;
-    font-size: 20px;
-    position: relative;
+
+    margin: 0;
   };
 
   #heroTextContainer {
-    margin-left: auto;
-    max-width: 35em;
-    position: relative;
-    /*height: 1280px;*/
-    padding-top: 40em;
+    margin: auto 0;
+
   }
 
   .icon-menu {
@@ -126,6 +161,12 @@ article {
     text-align: center;
     max-height: 2em;
     max-width: 2em;
+  }
+
+  article {
+    text-align: center;
+    max-width: 33%;
+    display: block;
   }
 
 }
