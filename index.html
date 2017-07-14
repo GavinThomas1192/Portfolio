@@ -49,18 +49,22 @@
   <!-- <script type="text/x-handlebars-template" id="template"> -->
   <section id="myProjects" class="tab-content">
     <h1 id='whatIveDone'>Some of my work</h1>
-    <div class="projects">
-      <section id="articles">
+    <div id='articles'>
+      <script id="article-template" type="text/x-handlebars-template">
+        <!-- <div class="projects">
+        <section id="articles"> -->
         <article class="template">
           <header>
-            <h1>Title</h1>
+            <h1>{{ title }}</h1>
             <div class="byline">
-              <a href=""><img id='thumbnail' src=""></a>
+              <a href="{{ url }}"><img id='thumbnail' src="{{ thumbnailPath }}"></a>
             </div>
           </header>
-          <section class="article-body"></section>
+          <section class="article-body">{{ description }}</section>
         </article>
-      </section>
+        <!-- </section>
+      </div> -->
+      </script>
     </div>
   </section>
   <!-- </script> -->
@@ -74,6 +78,7 @@
     </div>
   </section>
   <!-- ******Scripts***** -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
   <script src="projectsdata.js"></script>
   <script src="app.js">
   </script>

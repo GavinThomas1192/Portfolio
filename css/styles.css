@@ -8,138 +8,72 @@ nav {
   height: 5em;
 }
 
-#whatIveDone {
+body img{
   text-align: center;
-  font-size: 100px;
-  margin-top: 10%;
-  margin-bottom: 5%;
-  text-shadow: 4px 4px black;
+}
+
+#icon-menu img {
+  text-align: center;
+}
+
+.main-nav > ul {
+  display: none;
+}
+
+.main-nav > ul > li {
+  text-decoration: none;
+  color: white;
+
 }
 
 #hero {
+  background-image: url();
+  background-color: rgb(78, 91, 96);;
   text-align: center;
-  height: 100%;
-  width: 100%;
-  background-image: url('/img/PortBackground.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-
-}
-
-#heroTextContainer {
-  text-align: center;
-  margin-left: 33%;
-  margin-right: 33%;
-  position: relative;
-  padding: 10% 0% 25% 0%;
-}
-
-#heroText {
-  color: white;
-  font-size: 20px;
-  position: relative;
-  background-color: rgba(78, 91, 96, 0.3);
-  border-radius: 3%;
-};
-
-
-.button {
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    padding: 12px 24px;
-    border: 1px solid #1a1616;
-    border-radius: 8px;
-    background: #826e6e;
-    background: -webkit-gradient(linear, left top, left bottom, from(#826e6e), to(#1a1616));
-    background: -moz-linear-gradient(top, #826e6e, #1a1616);
-    background: linear-gradient(to bottom, #826e6e, #1a1616);
-    text-shadow: #0d0b0b 1px 5px 1px;
-    font: normal normal bold 26px arial;
-    color: #fff;
-    text-decoration: none;
-}
-.button:hover,
-.button:focus {
-    background: #9c8484;
-    background: -webkit-gradient(linear, left top, left bottom, from(#9c8484), to(#1f1a1a));
-    background: -moz-linear-gradient(top, #9c8484, #1f1a1a);
-    background: linear-gradient(to bottom, #9c8484, #1f1a1a);
-    color: #ffffff;
-    text-decoration: none;
-}
-.button:active {
-    background: #1a1616;
-    background: -webkit-gradient(linear, left top, left bottom, from(#1a1616), to(#1a1616));
-    background: -moz-linear-gradient(top, #1a1616, #1a1616);
-    background: linear-gradient(to bottom, #1a1616, #1a1616);
-}
-
-nav {
-  margin: auto 0;
+  margin-left: 0%;
   max-width: 100%;
 }
 
-nav ul li {
-  display: inline-block;
-  padding-right: 5em;
-  text-decoration: none;
+#heroText {
+  text-align: center;
+  max-width: 100%;
+  margin: 0%;
+
+};
+
+#heroTextContainer {
+  margin: 0%;
 }
 
-nav ul li a {
+.main-nav ul li {
+  padding-right: 5%;
+  display: inline;
   text-decoration: none;
+}
+.main-nav ul li a{
   color: white;
+  text-decoration: none;
+
 }
 
 .icon-menu {
+  display: block;
   text-align: center;
-  height: 100%;
-  width: 100%;
   max-height: 2em;
   max-width: 2em;
-  display: none;
-  margin-left: 46%;
-}
-
-#thumbnail {
-  width: 40%;
-  height: 30%;
-}
-
-.template {
-  display: none;
-}
-
-.projects {
-  display: inline;
+  padding: 5%;
+  margin-left: 41.5%;
+  margin-right: 33%;
 }
 
 article {
+  max-width: 100%;
   text-align: center;
-  max-width: 33%;
-  display: inline-block;
-  padding-bottom: 10%;
+  margin: auto 0;
+  width: 100%;
+  display: list-item;
 }
 
-article h1 {
-  text-shadow: 2px 2px black;
-  font-size: 50px;
-}
-
-.article-body {
-  padding: 5%;
-  font-size: 24px;
-}
-
-#about div {
-  padding-top: 6%;
-}
-
-#about {
-  display: inline;
-  color: white;
-}
 #about img {
   border-radius: 5%;
   height: 35%;
@@ -150,69 +84,150 @@ article h1 {
 
 
 
-@media (min-width: 320px) and (max-width: 720px) {
 
-  body img{
+@media (min-width: 720px) {
+
+
+  #whatIveDone {
     text-align: center;
+    font-size: 100px;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    text-shadow: 4px 4px black;
   }
 
-  #icon-menu img {
-    text-align: center;
-  }
-
-  header nav ul {
-    display:none;
-  }
   #hero {
-    background-image: url();
-    background-color: rgb(78, 91, 96);;
     text-align: center;
-    margin-left: 0%;
-    max-width: 100%;
+    height: 100%;
+    width: 100%;
+    background-image: url('/img/PortBackground.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+
+  }
+
+  #heroTextContainer {
+    text-align: center;
+    margin-left: 33%;
+    margin-right: 33%;
+    position: relative;
+    padding: 10% 0% 25% 0%;
   }
 
   #heroText {
-    text-align: center;
-    margin-left: 0%;
-    max-width: 100%;
+    color: white;
+    font-size: 20px;
+    position: relative;
+    background-color: rgba(78, 91, 96, 0.3);
+    border-radius: 3%;
   };
 
-  #heroTextContainer {
-    border: 0%;
-    text-align: center;
-    margin-left: 0%;
+
+  .button {
+      display: inline-block;
+      text-align: center;
+      vertical-align: middle;
+      padding: 12px 24px;
+      border: 1px solid #1a1616;
+      border-radius: 8px;
+      background: #826e6e;
+      background: -webkit-gradient(linear, left top, left bottom, from(#826e6e), to(#1a1616));
+      background: -moz-linear-gradient(top, #826e6e, #1a1616);
+      background: linear-gradient(to bottom, #826e6e, #1a1616);
+      text-shadow: #0d0b0b 1px 5px 1px;
+      font: normal normal bold 26px arial;
+      color: #fff;
+      text-decoration: none;
+  }
+  .button:hover,
+  .button:focus {
+      background: #9c8484;
+      background: -webkit-gradient(linear, left top, left bottom, from(#9c8484), to(#1f1a1a));
+      background: -moz-linear-gradient(top, #9c8484, #1f1a1a);
+      background: linear-gradient(to bottom, #9c8484, #1f1a1a);
+      color: #ffffff;
+      text-decoration: none;
+  }
+  .button:active {
+      background: #1a1616;
+      background: -webkit-gradient(linear, left top, left bottom, from(#1a1616), to(#1a1616));
+      background: -moz-linear-gradient(top, #1a1616, #1a1616);
+      background: linear-gradient(to bottom, #1a1616, #1a1616);
+  }
+
+  nav {
+    margin: auto 0;
     max-width: 100%;
-
   }
 
-  .main-nav ul li {
-    padding-right: 5%;
-  }
-  .icon-menu {
+  .main-nav > ul {
     display: block;
+  }
+
+  nav ul li {
+    display: inline-block;
+    padding-right: 5em;
+    text-decoration: none;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .icon-menu {
     text-align: center;
+    height: 100%;
+    width: 100%;
     max-height: 2em;
     max-width: 2em;
-  }
-
-  article {
-    max-width: 100%;
-    text-align: center;
-    margin: auto 0;
-    width: 100%;
-    display: list-item;
-  }
-
-  #whatIveDone{
-    font-size: 52px;
-  }
-  header h1 {
-    font-size: 32px;
+    display: none;
+    margin-left: 46%;
   }
 
   #thumbnail {
-    width: 30%;
-    height: 20%;
+    width: 40%;
+    height: 30%;
   }
+
+
+  .projects {
+    display: inline;
+  }
+
+  article {
+    text-align: center;
+    max-width: 33%;
+    display: inline-block;
+    padding-bottom: 10%;
+  }
+
+  article h1 {
+    text-shadow: 2px 2px black;
+    font-size: 50px;
+  }
+
+  .article-body {
+    padding: 5%;
+    font-size: 24px;
+  }
+
+  #about div {
+    padding-top: 6%;
+  }
+
+  #about {
+    display: inline;
+    color: white;
+  }
+  #about img {
+    border-radius: 5%;
+    height: 35%;
+    width: 35%;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
 
 }
