@@ -20,6 +20,12 @@ body img{
   display: none;
 }
 
+.main-nav > ul > li {
+  text-decoration: none;
+  color: white;
+
+}
+
 #hero {
   background-image: url();
   background-color: rgb(78, 91, 96);;
@@ -41,12 +47,23 @@ body img{
 
 .main-nav ul li {
   padding-right: 5%;
+  display: inline;
+  text-decoration: none;
 }
+.main-nav ul li a{
+  color: white;
+  text-decoration: none;
+
+}
+
 .icon-menu {
   display: block;
   text-align: center;
   max-height: 2em;
   max-width: 2em;
+  padding: 5%;
+  margin-left: 41.5%;
+  margin-right: 33%;
 }
 
 article {
@@ -57,17 +74,14 @@ article {
   display: list-item;
 }
 
-#whatIveDone{
-  font-size: 52px;
-}
-header h1 {
-  font-size: 32px;
+#about img {
+  border-radius: 5%;
+  height: 35%;
+  width: 35%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
-#thumbnail {
-  width: 30%;
-  height: 20%;
-}
 
 
 
