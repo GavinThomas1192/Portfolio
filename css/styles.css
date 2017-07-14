@@ -82,6 +82,11 @@ article {
   max-height: 100%;
 }
 
+#thumbnail {
+  width: 20%;
+  height: 10%;
+}
+
 
 
 
