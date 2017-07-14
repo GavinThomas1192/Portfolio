@@ -26,16 +26,21 @@ function PastProject(rawDataObj) {
 }
 
 PastProject.prototype.toHtml = function() {
-  var $newPastProject = $('article.template').clone();
+  // var $newPastProject = $('article.template').clone();
+  //
+  // $newPastProject.removeClass().addClass(this.title);
+  //
+  //
+  // $newPastProject.find('h1').html(this.title);
+  // $newPastProject.find('a').attr('href', this.url);
+  // $newPastProject.find('img').attr('src', this.thumbnailPath);
+  // $newPastProject.find('section').html(this.description);
+  // return $newPastProject;
 
-  $newPastProject.removeClass().addClass(this.title);
+  var source = $('#article-template').html();
+  var comp = Handlebars.compile(source);
 
-
-  $newPastProject.find('h1').html(this.title);
-  $newPastProject.find('a').attr('href', this.url);
-  $newPastProject.find('img').attr('src', this.thumbnailPath);
-  $newPastProject.find('section').html(this.description);
-  return $newPastProject;
+  return comp(this);
 
 };
 
