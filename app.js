@@ -2,10 +2,10 @@
 $(document).ready(function() {
 
   $('#quote').hide();
+  $('#heroText').fadeOut();
+  $('#heroText').fadeIn(8000);
 
   $(window).mousemove(function() {
-    $('#heroText').fadeOut(4000);
-    $('#heroText').fadeIn('slow');
     $('#quote').fadeIn(5000);
   })
   $('.icon-menu').on('click', function() {
@@ -39,7 +39,7 @@ PastProject.prototype.toHtml = function() {
 
   var source = $('#article-template').html();
   var comp = Handlebars.compile(source);
-
+//$('#articles').append(compile(this));
   return comp(this);
 
 };
@@ -56,7 +56,7 @@ pastProjects.forEach(function(PastProject) {
 pastProjects.handleMainNav = function() {
   $('.main-nav .tab').on('click', function () {
     $('.tab-content').hide();
-    $('#' + $(this).data('content')).fadeIn();
+    $('#' + $(this).data('content')).fadeIn('slow');
 
 
   });
