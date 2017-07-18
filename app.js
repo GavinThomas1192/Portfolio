@@ -46,7 +46,6 @@ PastProject.loadAll = function(rawData) {
     $('#articles').append(PastProject.toHtml());
   });
 
-
 };
 
 PastProject.fetchAll = function() {
@@ -62,18 +61,12 @@ PastProject.fetchAll = function() {
       PastProject.loadAll(JSON.parse(localStorage.getItem('rawData')));
     },
 
-
       function(err) {
         console.log(err);
       }
     )
-
   }
 }
-
-// pastProjects.forEach(function(PastProject) {
-//   $('#articles').append(PastProject.toHtml());
-// });
 
 pastProjects.handleMainNav = function() {
   $('.main-nav .tab').on('click', function() {
