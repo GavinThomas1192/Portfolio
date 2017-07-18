@@ -26,35 +26,57 @@ function PastProject(rawDataObj) {
 }
 
 PastProject.prototype.toHtml = function() {
-  // var $newPastProject = $('article.template').clone();
-  //
-  // $newPastProject.removeClass().addClass(this.title);
-  //
-  //
-  // $newPastProject.find('h1').html(this.title);
-  // $newPastProject.find('a').attr('href', this.url);
-  // $newPastProject.find('img').attr('src', this.thumbnailPath);
-  // $newPastProject.find('section').html(this.description);
-  // return $newPastProject;
+
 
   var source = $('#article-template').html();
   var comp = Handlebars.compile(source);
-//$('#articles').append(compile(this));
+  //$('#articles').append(compile(this));
   return comp(this);
 
 };
 
-rawData.forEach(function(projectObject) {
-  pastProjects.push(new PastProject(projectObject));
+PastProject.loadAll = function(rawData) {
 
-});
+  rawData.forEach(function(projectObject) {
+    pastProjects.push(new PastProject(projectObject));
+  });
 
-pastProjects.forEach(function(PastProject) {
-  $('#articles').append(PastProject.toHtml());
-});
+
+  pastProjects.forEach(function(PastProject) {
+    $('#articles').append(PastProject.toHtml());
+  });
+
+
+};
+
+PastProject.fetchAll = function() {
+  if (localStorage.rawData) {
+
+    PastProject.loadAll(JSON.parse(localStorage.getItem('rawData')));
+
+  } else {
+
+    $.getJSON('./projectsdata.json')
+    .then( function(data) {
+      localStorage.setItem('rawData', JSON.stringify(data));
+      PastProject.loadAll(JSON.parse(localStorage.getItem('rawData')));
+    },
+
+
+      function(err) {
+        console.log(err);
+      }
+    )
+
+  }
+}
+
+// pastProjects.forEach(function(PastProject) {
+//   $('#articles').append(PastProject.toHtml());
+// });
 
 pastProjects.handleMainNav = function() {
-  $('.main-nav .tab').on('click', function () {
+  $('.main-nav .tab').on('click', function() {
     $('.tab-content').hide();
     $('#' + $(this).data('content')).fadeIn('slow');
 
