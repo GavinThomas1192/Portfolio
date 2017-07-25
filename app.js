@@ -14,8 +14,8 @@ var app = app || {};
       $(this).hide();
       $('header nav ul').fadeIn('slow');
       $(this).fadeIn(3000);
-
     });
+    $('h5').text('The word I was said ' + '500 times throughout this webpage');
   });
 
   var pastProjects = [];
