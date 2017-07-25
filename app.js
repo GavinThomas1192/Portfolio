@@ -1,6 +1,8 @@
+
 'use-strict';
 var app = app || {};
 (function(module) {
+
   $(document).ready(function() {
 
     $('#quote').hide();
@@ -48,11 +50,14 @@ var app = app || {};
     $('.main-nav .tab:first').click();
   };
 
+
   pastProjects.handleMainNav();
+
 
   let favoriteNumbers = [2, 4, 11, 76, 99, 204];
   let favoriteNumbersTotal = favoriteNumbers.reduce((acc, curr) => acc + curr);
   $('h5').append('The sum of my favorite numbers is ' + favoriteNumbersTotal + '.');
+
 
   module.PastProject = PastProject
 })(app);
