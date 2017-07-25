@@ -20,12 +20,6 @@ var rawData = [{
   url: 'http://www.lakewood-vet-hospital.com'
 },
 
-{
-  title: 'Amazon',
-  thumbnailPath: '/img/amazon.jpeg',
-  description: 'I will work for amazon in their backend project department. They will ask me how they can improve their backend data and scripts and I will solve all their problems.',
-  url: 'http://www.lakewood-vet-hospital.com'
-}
 ];
 
 console.log(rawData);
