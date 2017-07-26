@@ -12,15 +12,8 @@ var app = app || {};
     $(window).mousemove(function() {
       $('#quote').fadeIn(5000);
     })
-    $('.icon-menu').on('click', function() {
-      $(this).hide();
-      $('header nav ul').fadeIn('slow');
-      $(this).fadeIn(3000);
-
-    });
   });
 
-  var pastProjects = [];
 
   function PastProject(rawDataObj) {
 
@@ -35,23 +28,10 @@ var app = app || {};
 
   };
 
-  pastProjects = rawData.map(ele => new PastProject(ele)).map(function(pro) {
+  rawData.map(ele => new PastProject(ele)).map(function(pro) {
     $('#articles').append(pro.toHtml());
   })
 
-
-  pastProjects.handleMainNav = function() {
-    $('.main-nav .tab').on('click', function() {
-      $('.tab-content').hide();
-      $('#' + $(this).data('content')).fadeIn('slow');
-
-
-    });
-    $('.main-nav .tab:first').click();
-  };
-
-
-  pastProjects.handleMainNav();
 
 
   let favoriteNumbers = [2, 4, 11, 76, 99, 204];

@@ -24,9 +24,9 @@
   <header>
     <nav class="main-nav">
       <ul>
-        <li class="tab" data-content="main"><a href="#"> Home</a></li>
-        <li class="tab" data-content="about"><a href="#">About</a></li>
-        <li class="tab" data-content="myProjects"><a href="#">My Projects</a></li>
+        <li class="tab" data-content="main"><a href="/"> Home</a></li>
+        <li class="tab" data-content="about"><a href="/about">About</a></li>
+        <li class="tab" data-content="myProjects"><a href="/projects">My Projects</a></li>
         <li><a href="https://github.com/GavinThomas1192">GitHub</a></li>
 
       </ul>
@@ -50,7 +50,7 @@
     <h1 id='whatIveDone'>Some of my work</h1>
     <div id='articles'>
       <script id="article-template" type="text/x-handlebars-template">
-        <article class="template">
+        <article>
           <header>
             <h1>{{ title }}</h1>
             <div class="byline">
@@ -77,9 +77,15 @@
   </footer>
   <!-- ******Scripts***** -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+  <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
   <script src="projectsdata.js"></script>
   <script src="app.js">
   </script>
+
+  <script src="/controllers/aboutController.js"></script>
+  <script src="/controllers/homeController.js"></script>
+  <script src="/controllers/projectsController.js"></script>
+  <script src="/controllers/routes.js"></script>
 </body>
 
 </html>
