@@ -21,5 +21,3 @@ var rawData = [{
 },
 
 ];
-
-console.log(rawData);
