@@ -7,12 +7,7 @@ var app = app || {};
   repos.all = [];
   repos.requestRepos = function(callback) {
 
-    $.get({
-      url: 'https://api.github.com/user/repos?type=owner',
-      headers: {
-        Authorization: `token ${process.env.GITHUB_TOKEN}`
-      }
-    })
+    $.get('https://api.github.com/user/repos?type=owner')
     .then(
       data => {
         console.log(data);
