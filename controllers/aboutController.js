@@ -8,6 +8,7 @@ var app = app || {};
     $('.tab-content').hide();
     $('#about').show();
 
+    app.repos.requestRepos(app.repoView.index);
   }
 
   module.aboutController = aboutController;
