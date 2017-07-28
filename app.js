@@ -14,7 +14,6 @@ var app = app || {};
     })
   });
 
-
   function PastProject(rawDataObj) {
 
     Object.keys(rawDataObj).forEach(key => this[key] = rawDataObj[key]);
